@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        Logger.components = [.file,.function,.line]
+        Logger.newprint("Sample print")
+        Logger.myprint("hello", .info)
+        Logger.myprint("hello", .warning)
+        Logger.myprint("hello", .error)
+        Logger.osLog()
+
     }
 
 
